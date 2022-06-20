@@ -1,0 +1,29 @@
+{
+  "name": "u-vote-it",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js",
+    "kill": "npx kill-port 7121"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AMHaag/u-vote-it.git"
+  },
+  "keywords": [],
+  "author": "Aaron Haag",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AMHaag/u-vote-it/issues"
+  },
+  "homepage": "https://github.com/AMHaag/u-vote-it#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "jest": "^28.1.1"
+  }
+}
