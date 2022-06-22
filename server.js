@@ -63,7 +63,12 @@ app.get("/api/candidates", (req, res) => {
 });
 
 app.get("/api/candidates/:id", (req, res) => {
-  const sql = `SELECT * FROM candidates WHERE id=?`;
+  const sql = `SELECT candidates.*, party.name 
+        AS party_name 
+        FROM candidates 
+        LEFT JOIN party 
+        ON candidates.party_id = party.id 
+        WHERE candidates.id = ?`;
   const params = [req.params.id];
 
   db.query(sql, params, (err, row) => {
